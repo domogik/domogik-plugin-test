@@ -1,0 +1,137 @@
+{
+    "products" : [ ],
+    "configuration": [
+        {
+            "default": "False", 
+            "description": "Automatically start plugin at Domogik startup", 
+            "key": "startup_startup", 
+            "name": "startup plugin",
+            "required": "yes", 
+            "type": "boolean"
+        }, 
+        {
+            "default": "0", 
+            "description": "A dummy config", 
+            "key": "dummy", 
+            "name": "Dummy",
+            "required": "yes", 
+            "type": "string"
+        }
+    ], 
+    "xpl_commands": {
+         "test_command": {
+            "name": "test_command",
+            "schema": "test.basic",
+            "xplstat_name": "test_stat",
+            "parameters": {
+                    "static": [
+                    	{
+				"key": "cmdStatic",
+				"value": "staticValue"
+			}
+		    ],
+                    "device": [
+			{
+				"key": "cmdDevice",
+				"description": "testdescription",
+				"type": "string"
+			}	
+		    ]
+                }
+         }
+    },
+    "xpl_stats": {
+       "test_stat": {
+            "name": "test_stat",
+            "schema": "test.device",
+            "parameters": {
+                    "static": [
+                    	{
+				"key": "statStatic",
+				"value": "staticValue"
+			}
+		    ],
+                    "device": [
+			{
+				"key": "statDevice",
+				"description": "testdescription",
+				"type": "string"
+			}	
+		    ],
+                    "dynamic": [
+                        {
+                             "key": "statDynamic",
+                             "ignore_values": "",
+                             "sensor": "test_sensor"
+                        }
+                    ]
+            }
+       }
+    },
+    "commands": {
+       "test_command": {
+           "name": "Test command",
+           "return_confirmation": true,
+           "parameters": [
+               {
+                   "key": "cmdParam",
+                   "data_type": "DT_Switch",
+                   "conversion": ""
+               }
+           ],
+           "xpl_command": "test_command"
+        }
+    },
+    "sensors": {
+	"test_sensor": {
+		"name": "Test sensor",
+                "data_type": "DT_Switch",
+                "conversion": "",
+                "history": {
+                    "store": true,
+                    "max": 3,
+                    "expire": 0,
+                    "round_value": 0
+                }
+	}
+    },
+    "device_types": {
+        "test.test": {
+            "id": "test.test",
+            "description": "Test device type", 
+            "name": "Test",
+            "commands": ["test_command"],
+            "sensors": ["test_sensor"],
+            "parameters": [
+                {
+                    "key": "DeviceTypeParam",
+                    "xpl": true,
+                    "description": "DeviceTypeParam",
+                    "type": "integer",
+                    "max_value": 4,
+                    "min_value": 1
+                },
+                {
+                    "key": "DeviceTypeParamNoXPL",
+                    "xpl": false,
+                    "description": "DeviceTypeParamNoXPL",
+                    "type": "integer",
+                    "max_value": 255,
+                    "min_value": 0
+                }
+            ]
+        }
+    }, 
+    "identity": {
+        "author": "Maikel Punie", 
+        "author_email": "maikel.puni@gmail.com", 
+        "dependencies": [], 
+        "description": "Test plugin", 
+        "domogik_min_version": "0.1.0", 
+        "name": "test", 
+        "type": "plugin", 
+        "version": "0.1.0",
+        "tags": ["test"]
+    }, 
+    "json_version": 2
+}
