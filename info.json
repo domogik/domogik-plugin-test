@@ -24,20 +24,20 @@
             "schema": "test.basic",
             "xplstat_name": "test_stat",
             "parameters": {
-                    "static": [
-                    	{
-				"key": "cmdStatic",
-				"value": "staticValue"
-			}
-		    ],
-                    "device": [
-			{
-				"key": "cmdDevice",
-				"description": "testdescription",
-				"type": "string"
-			}	
-		    ]
-                }
+                "static": [
+                    {
+                        "key": "cmdStatic",
+                        "value": "staticValue"
+                    }
+                ],
+                "device": [
+                    {
+                        "key": "cmdDevice",
+                        "description": "testdescription",
+                        "type": "string"
+                    }	
+                ]
+            }
          }
     },
     "xpl_stats": {
@@ -45,26 +45,27 @@
             "name": "test_stat",
             "schema": "test.device",
             "parameters": {
-                    "static": [
-                    	{
-				"key": "statStatic",
-				"value": "staticValue"
-			}
-		    ],
-                    "device": [
-			{
-				"key": "statDevice",
-				"description": "testdescription",
-				"type": "string"
-			}	
-		    ],
-                    "dynamic": [
-                        {
-                             "key": "statDynamic",
-                             "ignore_values": "",
-                             "sensor": "test_sensor"
-                        }
-                    ]
+                "static": [
+                    {
+                        "key": "statStatic",
+                        "value": "staticValue"
+                    }
+                ],
+                "device": [
+                    {
+                        "key": "statDevice",
+                        "description": "testdescription",
+                        "type": "string",
+                        "multiple": "|"
+                    }	
+                ],
+                "dynamic": [
+                    {
+                         "key": "statDynamic",
+                         "ignore_values": "",
+                         "sensor": "test_sensor"
+                    }
+                ]
             }
        }
     },
@@ -85,14 +86,17 @@
     "sensors": {
 	"test_sensor": {
 		"name": "Test sensor",
-                "data_type": "DT_Switch",
-                "conversion": "",
-                "history": {
-                    "store": true,
-                    "max": 3,
-                    "expire": 0,
-                    "round_value": 0
-                }
+            "data_type": "DT_Switch",
+            "conversion": "",
+            "incremental": false,
+            "timeout": 0,
+            "history": {
+                "store": true,
+                "duplicate": false,
+                "max": 3,
+                "expire": 0,
+                "round_value": 0
+            }
 	}
     },
     "device_types": {
@@ -107,6 +111,7 @@
                     "key": "DeviceTypeParam",
                     "xpl": true,
                     "description": "DeviceTypeParam",
+                    "default": "default-value",
                     "type": "integer",
                     "max_value": 4,
                     "min_value": 1
@@ -115,6 +120,7 @@
                     "key": "DeviceTypeParamNoXPL",
                     "xpl": false,
                     "description": "DeviceTypeParamNoXPL",
+                    "default": "default-value-noxpl",
                     "type": "integer",
                     "max_value": 255,
                     "min_value": 0
