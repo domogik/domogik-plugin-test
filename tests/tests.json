@@ -1,8 +1,23 @@
 {
-    '10_tests' : {
-        'automatic' : true,
-        'alter_configuration_or_setup' : 'true',
-        'need_hardware' : false,
-        'mock_available' : false
+    "001_config": {
+        "automatic" : true,
+        "alter_configuration_or_setup" : "true",
+        "need_hardware" : false,
+        "mock_available" : false,
+        "criticity": "high"
+    },
+    "010_start" : {
+        "automatic" : true,
+        "alter_configuration_or_setup" : "true",
+        "need_hardware" : false,
+        "mock_available" : false,
+        "criticity": "high"
+    },
+    "090_stop" : {
+        "automatic" : true,
+        "alter_configuration_or_setup" : "true",
+        "need_hardware" : false,
+        "mock_available" : false,
+        "criticity": "high"
     }
 }

@@ -2,14 +2,6 @@
     "products" : [ ],
     "configuration": [
         {
-            "default": "False", 
-            "description": "Automatically start plugin at Domogik startup", 
-            "key": "startup_startup", 
-            "name": "startup plugin",
-            "required": "yes", 
-            "type": "boolean"
-        }, 
-        {
             "default": "0", 
             "description": "A dummy config", 
             "key": "dummy", 
@@ -132,8 +124,8 @@
         "author": "Maikel Punie", 
         "author_email": "maikel.puni@gmail.com", 
         "dependencies": [], 
-        "description": "Test plugin", 
-        "domogik_min_version": "0.1.0", 
+        "description": "Test plugin. This plugin will only simulate most of domogik features, there is no use in using it if your devellopping domogik.", 
+        "domogik_min_version": "0.4.0", 
         "name": "test", 
         "type": "plugin", 
         "version": "0.1.0",
