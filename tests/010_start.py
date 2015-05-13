@@ -3,7 +3,10 @@
 
 from domogik.tests.common.testplugin import TestPlugin
 from domogik.common.utils import get_sanitized_hostname
+from domogikmq.reqrep.client import MQSyncReq
+from domogikmq.message import MQMessage
 import time
+import zmq
 
 tp = TestPlugin('test', get_sanitized_hostname())
 tp.request_startup()
