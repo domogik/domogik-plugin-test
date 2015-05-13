@@ -13,6 +13,27 @@
         "mock_available" : false,
         "criticity": "high"
     },
+    "020_device": {
+        "automatic" : true,
+        "alter_configuration_or_setup" : "true",
+        "need_hardware" : false,
+        "mock_available" : false,
+        "criticity": "high"
+    },
+    "030_sensor": {
+        "automatic" : true,
+        "alter_configuration_or_setup" : "true",
+        "need_hardware" : false,
+        "mock_available" : false,
+        "criticity": "high"
+    },
+    "040_command": {
+        "automatic" : true,
+        "alter_configuration_or_setup" : "true",
+        "need_hardware" : false,
+        "mock_available" : false,
+        "criticity": "high"
+    },
     "090_stop" : {
         "automatic" : true,
         "alter_configuration_or_setup" : "true",

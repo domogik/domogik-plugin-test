@@ -4,9 +4,9 @@ domogik-plugin-test
 This is a test plugin, the only reason for this plugin is to have some automated testcases for domogik, the folowing actions will be tested:
 
 1- install the plugin
-    - dmg_package -i <url of stable version>
+    [OK] dmg_package -i <url of stable version>
 2- Run testcases
-    1- config + check config
+    [OK]- config + check config
     2- start + check running
     3- get device params + validate
     4- create device + validate the get_device
@@ -16,9 +16,9 @@ This is a test plugin, the only reason for this plugin is to have some automated
     8- rerun 6 (to make sure everything still works after the command sending)
     9- send a command where we will never have a result for
     10- delete device
-    11- stop plugin
+    [OK]- stop plugin
 3- uninstall the plugin
-    -dmg_package -r plugin_test
+    [OK] -dmg_package -r plugin_test
 
 This will create a basic sanity check for domogik, these test will run on travis and maybe later on be used as an initial config tester before the suers start to use domogik.
 
