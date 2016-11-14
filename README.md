@@ -4,13 +4,13 @@ domogik-plugin-test
 This is a test plugin, the only reason for this plugin is to have some automated testcases for domogik, the folowing actions will be tested:
 
 1. install the plugin
-    [OK] dmg_package -i <url of stable version>
+    a. [OK] dmg_package -i <url of stable version>
 2. Run testcases
-    001 - [OK] Config
-    010 - [OK] start
-    020 - device
-        - [OK] request the params (and validate)
-        - create a device
+    001. [OK] Config
+    010. [OK] start
+    020. device
+        * [OK] request the params (and validate)
+        * create a device
     030 - sensor
         - request current data
         - wait for sensor value
