@@ -9,7 +9,9 @@ This is a test plugin, the only reason for this plugin is to have some automated
     001. [OK] Config
     010. [OK] start
     020. device
-        * [OK] request the params (and validate)
+        * request the params (and validate)
+            * [OK] Over MQ
+            * Over REST
         * create a device
     030. sensor
         * request current data
