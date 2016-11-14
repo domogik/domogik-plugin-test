@@ -11,16 +11,16 @@ This is a test plugin, the only reason for this plugin is to have some automated
     020. device
         * [OK] request the params (and validate)
         * create a device
-    030 - sensor
-        - request current data
-        - wait for sensor value
-        - request current data
-    040 - command
-        - create a command
-        - wait for sensor update
-    090 - [OK] stop
+    030. sensor
+        * request current data
+        * wait for sensor value
+        * request current data
+    040. command
+        * create a command
+        * wait for sensor update
+    090. [OK] stop
 3. uninstall the plugin
-    [OK] -dmg_package -r plugin_test
+    a. [OK] -dmg_package -r plugin_test
 
 This will create a basic sanity check for domogik, these test will run on travis and maybe later on be used as an initial config tester before the suers start to use domogik.
 
