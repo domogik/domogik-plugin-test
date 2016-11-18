@@ -34,6 +34,13 @@
         "mock_available" : false,
         "criticity": "high"
     },
+    "080_admin": {
+        "automatic" : true,
+        "alter_configuration_or_setup" : "true",
+        "need_hardware" : false,
+        "mock_available" : false,
+        "criticity": "high"
+    },
     "090_stop" : {
         "automatic" : true,
         "alter_configuration_or_setup" : "true",
