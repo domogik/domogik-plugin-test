@@ -12,13 +12,18 @@ This is a test plugin, the only reason for this plugin is to have some automated
             * [OK] Over MQ
             * [OK] Over REST
         * create a device
-    030. sensor
+    030. Sensor
         * request current data
         * wait for sensor value
         * request current data
-    040. command
+    040. Command
         * create a command
         * wait for sensor update
+    080. [OK] Admin
+        * call some admin urls and expect redirects to login page
+        * call some rest urls
+        * login to admin
+        * call some /admin urls
     090. [OK] stop
 3. [OK] uninstall the plugin: dmg_package -r plugin_test
 
