@@ -7,10 +7,8 @@ This is a test plugin, the only reason for this plugin is to have some automated
 2. Run testcases
     001. [OK] Config
     010. [OK] start
-    020. device
-        * [OK] request the params (and validate)
-            * [OK] Over MQ
-            * [OK] Over REST
+    020. [OK] device
+        * request the params
         * create a device
     030. Sensor
         * request current data

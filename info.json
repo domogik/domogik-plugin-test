@@ -11,10 +11,10 @@
         }
     ], 
     "xpl_commands": {
-         "test_command": {
-            "name": "test_command",
+         "test_xpl_command": {
+            "name": "test_xpl_command",
             "schema": "test.basic",
-            "xplstat_name": "test_stat",
+            "xplstat_name": "test_xpl_stat",
             "parameters": {
                 "static": [
                     {
@@ -33,8 +33,8 @@
          }
     },
     "xpl_stats": {
-       "test_stat": {
-            "name": "test_stat",
+       "test_xpl_stat": {
+            "name": "test_xpl_stat",
             "schema": "test.device",
             "parameters": {
                 "static": [
@@ -55,15 +55,15 @@
                     {
                          "key": "statDynamic",
                          "ignore_values": "",
-                         "sensor": "test_sensor"
+                         "sensor": "test_xpl_sensor"
                     }
                 ]
             }
        }
     },
     "commands": {
-       "test_command": {
-           "name": "Test command",
+       "test_xpl_command": {
+           "name": "Test XPL command",
            "return_confirmation": true,
            "parameters": [
                {
@@ -72,12 +72,37 @@
                    "conversion": ""
                }
            ],
-           "xpl_command": "test_command"
+           "xpl_command": "test_xpl_command"
+        },
+        "test_mq_command": {
+           "name": "Test MQ command",
+           "return_confirmation": true,
+           "parameters": [
+               {
+                   "key": "cmdParam",
+                   "data_type": "DT_Switch",
+                   "conversion": ""
+               }
+           ]
         }
     },
     "sensors": {
-	"test_sensor": {
-		"name": "Test sensor",
+	"test_xpl_sensor": {
+	    "name": "Test XPL sensor",
+            "data_type": "DT_Switch",
+            "conversion": "",
+            "incremental": false,
+            "timeout": 0,
+            "history": {
+                "store": true,
+                "duplicate": false,
+                "max": 3,
+                "expire": 0,
+                "round_value": 0
+            }
+	},
+	"test_mq_sensor": {
+	    "name": "Test MQ sensor",
             "data_type": "DT_Switch",
             "conversion": "",
             "incremental": false,
@@ -92,12 +117,12 @@
 	}
     },
     "device_types": {
-        "test.test": {
-            "id": "test.test",
-            "description": "Test device type", 
-            "name": "Test",
-            "commands": ["test_command"],
-            "sensors": ["test_sensor"],
+        "test.xpltest": {
+            "id": "test.xpltest",
+            "description": "XPL test device type", 
+            "name": "XPL Test",
+            "commands": ["test_xpl_command"],
+            "sensors": ["test_xpl_sensor"],
             "parameters": [
                 {
                     "key": "DeviceTypeParam",
@@ -118,13 +143,31 @@
                     "min_value": 0
                 }
             ]
+        },
+        "test.mqtest": {
+            "id": "test.mqtest",
+            "description": "MQ Test device type", 
+            "name": "MQ Test",
+            "commands": ["test_mq_command"],
+            "sensors": ["test_mq_sensor"],
+            "parameters": [
+                {
+                    "key": "DeviceTypeParam",
+                    "xpl": false,
+                    "description": "DeviceTypeParam",
+                    "default": "default-value",
+                    "type": "integer",
+                    "max_value": 4,
+                    "min_value": 1
+                }
+            ]
         }
     }, 
     "identity": {
         "author": "Maikel Punie", 
         "author_email": "maikel.puni@gmail.com", 
         "dependencies": [], 
-        "description": "Test plugin. This plugin will only simulate most of domogik features, there is no use in using it if your devellopping domogik.", 
+        "description": "Test plugin. This plugin will only simulate most of domogik features, there is no use in using it if your not developping domogik.", 
         "domogik_min_version": "0.4.0", 
         "name": "test", 
         "type": "plugin", 
