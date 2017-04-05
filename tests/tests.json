@@ -35,7 +35,7 @@
         "criticity": "high"
     },
     "080_admin": {
-        "automatic" : true,
+        "automatic" : false,
         "alter_configuration_or_setup" : "true",
         "need_hardware" : false,
         "mock_available" : false,
