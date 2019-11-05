@@ -2,14 +2,14 @@
     "products" : [ ],
     "configuration": [
         {
-            "default": "0", 
-            "description": "A dummy config", 
-            "key": "dummy", 
+            "default": "0",
+            "description": "A dummy config",
+            "key": "dummy",
             "name": "Dummy",
-            "required": "yes", 
+            "required": "yes",
             "type": "string"
         }
-    ], 
+    ],
     "xpl_commands": {
          "test_xpl_command": {
             "name": "test_xpl_command",
@@ -27,7 +27,7 @@
                         "key": "cmdDevice",
                         "description": "testdescription",
                         "type": "string"
-                    }	
+                    }
                 ]
             }
          }
@@ -49,7 +49,7 @@
                         "description": "testdescription",
                         "type": "string",
                         "multiple": "|"
-                    }	
+                    }
                 ],
                 "dynamic": [
                     {
@@ -119,7 +119,7 @@
     "device_types": {
         "test.xpltest": {
             "id": "test.xpltest",
-            "description": "XPL test device type", 
+            "description": "XPL test device type",
             "name": "XPL Test",
             "commands": ["test_xpl_command"],
             "sensors": ["test_xpl_sensor"],
@@ -141,12 +141,21 @@
                     "type": "integer",
                     "max_value": 255,
                     "min_value": 0
+                },
+                {
+                    "key": "timer_status",
+                    "xpl": false,
+                    "description": "Timer to ping device regularly(s)",
+                    "default": "0",
+                    "type": "integer",
+                    "max_value": 3600,
+                    "min_value": 0
                 }
             ]
         },
         "test.mqtest": {
             "id": "test.mqtest",
-            "description": "MQ Test device type", 
+            "description": "MQ Test device type",
             "name": "MQ Test",
             "commands": ["test_mq_command"],
             "sensors": ["test_mq_sensor"],
@@ -155,24 +164,33 @@
                     "key": "DeviceTypeParam",
                     "xpl": false,
                     "description": "DeviceTypeParam",
-                    "default": "default-value",
+                    "default": "1",
                     "type": "integer",
                     "max_value": 4,
                     "min_value": 1
+                },
+                {
+                    "key": "timer_status",
+                    "xpl": false,
+                    "description": "Timer to ping device regularly(s)",
+                    "default": "0",
+                    "type": "integer",
+                    "max_value": 3600,
+                    "min_value": 0
                 }
             ]
         }
-    }, 
+    },
     "identity": {
-        "author": "Maikel Punie", 
-        "author_email": "maikel.puni@gmail.com", 
-        "dependencies": [], 
-        "description": "Test plugin. This plugin will only simulate most of domogik features, there is no use in using it if your not developping domogik.", 
-        "domogik_min_version": "0.4.0", 
-        "name": "test", 
-        "type": "plugin", 
-        "version": "0.1.0",
+        "author": "Nico0084",
+        "author_email": "nico84dev@gmail.com",
+        "dependencies": [],
+        "description": "Test plugin. This plugin will only simulate most of domogik features, there is no use in using it if your not developping domogik.",
+        "domogik_min_version": "0.6.0",
+        "name": "test",
+        "type": "plugin",
+        "version": "0.2.0",
         "tags": ["test"]
-    }, 
+    },
     "json_version": 2
 }
