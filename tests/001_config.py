@@ -8,5 +8,5 @@ delete_configuration("plugin", "test", get_sanitized_hostname())
 configure("plugin", "test", get_sanitized_hostname(), "dummy", "dummyConfigParam")
 
 print("==> Check the config")
-check_config("plugin", "test", get_sanitized_hostname(), "configured", True)
+check_config("plugin", "test", get_sanitized_hostname(), "configured", "1")
 check_config("plugin", "test", get_sanitized_hostname(), "dummy", "dummyConfigParam")
