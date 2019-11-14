@@ -186,7 +186,7 @@
         "author_email": "nico84dev@gmail.com",
         "dependencies": [],
         "description": "Test plugin. This plugin will only simulate most of domogik features, there is no use in using it if your not developping domogik.",
-        "domogik_min_version": "0.6.0",
+        "domogik_min_version": "0.6.5",
         "name": "test",
         "type": "plugin",
         "version": "0.2.0",
